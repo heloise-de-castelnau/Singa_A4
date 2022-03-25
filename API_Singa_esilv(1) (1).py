@@ -1,27 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-get_ipython().system('pip install streamlit')
-get_ipython().system('pip install pyngrok')
-get_ipython().system('pip install pdfminer')
-get_ipython().system('pip install ipython_blocking')
-
-
-# In[21]:
-
-
-import streamlit as st
-import ipython_blocking
-
-
-# In[22]:
-
-
-#Ecriture de l'API
-%%writefile monapp.py
 import streamlit as st
 from PIL import Image
 #Importer les datasets
@@ -334,41 +310,3 @@ def main():
 
 
 main()
-
-
-# In[15]:
-
-
-get_ipython().system('ngrok authtoken 264Tgp8yr4I01TU8If3Wvb0rJWR_63fV6BNY4kQehfh4JL4zw')
-
-
-# In[16]:
-
-
-from pyngrok import ngrok
-get_ipython().system('streamlit run --server.port 80 monapp.py&>/dev/null&')
-
-
-# In[17]:
-
-
-get_ipython().system('pgrep streamlit')
-
-
-# In[18]:
-
-
-publ_url = ngrok.connect(port='8501')
-
-
-# In[19]:
-
-
-publ_url
-
-
-# In[20]:
-
-
-#ngrok.kill()
-
