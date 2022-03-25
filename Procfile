@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run visu.py
+web: sh setup.sh && streamlit run app.py
