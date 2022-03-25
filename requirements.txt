@@ -1,4 +1,6 @@
 streamlit
+pyngrok
+pdfminer
 pandas
 numpy
 plotly.express
