@@ -7,3 +7,4 @@ plotly.express
 seaborn
 matplotlib
 Pillow
+openpyxl
